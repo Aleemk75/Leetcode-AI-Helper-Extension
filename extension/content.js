@@ -1,4 +1,4 @@
-console.log("LeetCode Helper Active!");
+console.log("LeetCode AI Helper Active!");
 
 const metaDescriptionEl = document.querySelector("meta[name=description]");
 

@@ -67,7 +67,7 @@ btn.addEventListener("click", async () => {
           });
 
           const explanation = await res.json();
-          console.log("Explanation:", explanation);
+          // console.log("Explanation:", explanation);
           typeText(desc, explanation); // Use typing effect
         } catch (err) {
           console.error("Fetch error:", err);

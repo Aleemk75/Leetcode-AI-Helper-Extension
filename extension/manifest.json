@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "LeetCode Helper",
+  "name": "LeetCode AI Helper",
   "version": "1.0",
   "description": "Get instant explanations for LeetCode problems",
   "permissions": [
