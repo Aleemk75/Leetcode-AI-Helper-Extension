@@ -1,11 +1,14 @@
-# 🧠 LeetCode Helper Extension
+# 🧠 LeetCode AI Helper Extension
 
-The **LeetCode Helper** is a Chrome Extension that helps users instantly understand LeetCode problems.  
-It extracts the problem statement from the current page and sends it to a backend server that uses **Google Gemini API** to generate:
+- Built a Chrome Extension that extracts LeetCode problem statements and generates structured explanations using Google Gemini API.
 
-- ✅ Problem understanding  
-- ✅ Approach / Pseudocode  
-- ✅ Related topics  
+- Designed a Node.js backend to process problem statements and return AI-generated problem understanding, approach/pseudocode, and related topics.
+
+- Implemented response streaming (word-by-word) and a loading animation for smooth user experience.
+
+- Utilized Chrome Scripting API, JavaScript, HTML, CSS, and Express.js, demonstrating full-stack integration and prompt engineering.
+
+- Managed sensitive API keys securely using environment variables and handled CORS for extension requests.
 
 ---
 
@@ -164,8 +167,8 @@ Open a Pull Request
 
 👨‍💻 Author
 Aleem Khan
-🔗 LinkedIn
-💻 GitHub
+🔗 [LinkedIn](https://www.linkedin.com/in/aleemkh4n/)  
+💻 [GitHub](https://github.com/Aleemk75)
 
 
 
