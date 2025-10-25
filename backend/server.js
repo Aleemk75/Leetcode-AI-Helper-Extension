@@ -4,7 +4,12 @@ import "dotenv/config"
 import explainRouter from "./routes/explain.js";
 const app = express();
 
-app.use(cors());
+const allowedOrigin = "chrome-extension://khomlgglgjcpcdjmadneepcnebkpgepb";
+
+app.use(cors({
+  origin: allowedOrigin
+}));
+
 app.use(express.json());
 
 

@@ -1,20 +1,175 @@
-# 🧠 LeetCode Helper Chrome Extension
+# 🧠 LeetCode Helper Extension
 
-LeetCode Helper is a Chrome extension that reads the current LeetCode problem and generates a beginner-friendly explanation using Google's Gemini API.
+The **LeetCode Helper** is a Chrome Extension that helps users instantly understand LeetCode problems.  
+It extracts the problem statement from the current page and sends it to a backend server that uses **Google Gemini API** to generate:
 
-## ⚙️ Features
-- Extracts problem statements from LeetCode automatically.
-- Cleans up the "Can you solve this..." text.
-- Sends the question to a Node.js backend connected to Gemini.
-- Displays the AI explanation in the popup UI.
+- ✅ Problem understanding  
+- ✅ Approach / Pseudocode  
+- ✅ Related topics  
 
-## 🧰 Tech Stack
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Node.js, Express
-- **API:** Gemini 1.5 Flash
-- **Platform:** Chrome Extension
+---
 
-## 🚀 Setup
+## 🚀 Features
+- Fetches problem statements directly from the LeetCode page.  
+- Sends them to the backend for AI-powered explanations.  
+- Displays formatted explanations inside the extension popup.  
+- Loading animation and word-by-word streaming for smooth UX.  
+
+---
+
+## 🛠️ Tech Stack
+**Frontend (Extension):**
+- HTML, CSS, JavaScript  
+- Chrome Scripting API  
+
+**Backend:**
+- Node.js  
+- Express.js  
+- Google Gemini API  
+
+---
+
+## ⚙️ Project Structure
+
+LeetCode-Helper-Extension/
+│
+├── backend/
+│ ├── routes/
+│ │ └── explain.js
+│ ├── utils/
+│ │ └── geminiAI.js
+│ ├── server.js
+│ ├── .env
+│
+├── extension/
+│ ├── popup.html
+│ ├── popup.js
+│ ├── popup.css
+│ ├── manifest.json
+│
+└── README.md
+
+yaml
+Copy code
+
+---
+
+## 🧩 Installation & Setup
+
+### 1️⃣ Clone the Repository
 ```bash
+git clone https://github.com/yourusername/LeetCode-Helper-Extension.git
+cd LeetCode-Helper-Extension
+2️⃣ Setup Environment Variables
+Create a .env file inside the backend/ folder and add your Gemini API key:
+
+ini
+Copy code
+GEMINI_API_KEY=your_api_key_here
+PORT=5000
+You can get your API key from:
+👉 Google AI Studio (Gemini API)
+
+3️⃣ Install Dependencies
+Go to the backend folder and install the required packages:
+
+bash
+Copy code
+cd backend
 npm install
-node backend/server.js
+4️⃣ Start the Server
+Run the backend server locally:
+
+bash
+Copy code
+npm start
+Your server should start on http://localhost:5000
+
+5️⃣ Load the Chrome Extension
+Open Chrome and go to:
+
+arduino
+Copy code
+chrome://extensions/
+Enable Developer Mode (top right).
+
+Click “Load unpacked”.
+
+Select the extension/ folder.
+
+Your LeetCode Helper icon will now appear in the Chrome toolbar 🎉
+
+6️⃣ How It Works
+Open any LeetCode problem in your browser.
+
+Click the LeetCode Helper Extension icon.
+
+Click “Get Problem Info” — it will:
+
+Extract the problem statement from the page.
+
+Send it to the backend API (/api/explain).
+
+Get AI-generated explanation from Gemini.
+
+Display it beautifully in the popup.
+
+🧠 Example API Usage
+Endpoint:
+POST http://localhost:5000/api/explain
+
+Request Body:
+
+json
+Copy code
+{
+  "explain": "Given an array nums..."
+}
+Response Example:
+
+json
+Copy code
+{
+  "explanation": "This problem is about finding the maximum subarray..."
+}
+🔧 Developer Notes
+Added Loader animation during API call.
+
+Added word-by-word streaming typing effect for response display.
+
+Separated UI logic from data fetching for maintainability.
+
+Uses environment variables to keep API key secure.
+
+🧾 Future Improvements
+Add title extraction and difficulty level.
+
+Support for multiple AI providers (OpenAI, Claude).
+
+Store previous explanations in localStorage.
+
+🤝 Contributing
+Contributions are always welcome!
+If you’d like to improve the extension, follow these steps:
+
+Fork the repository
+
+Create your feature branch (git checkout -b feature-name)
+
+Commit your changes (git commit -m 'Add feature')
+
+Push to the branch (git push origin feature-name)
+
+Open a Pull Request
+
+👨‍💻 Author
+Aleem Khan
+🔗 LinkedIn
+💻 GitHub
+
+
+
+
+
+
+
