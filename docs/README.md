@@ -31,6 +31,15 @@
 - Google Gemini API  
 
 ---
+## 🖼️ Screenshots / Demo
+
+### Extension Popup
+![Extension Popup](![alt text](image.png))
+
+### AI Response Streaming
+![Response Streaming](![alt text](image-1.png))
+
+
 
 ## ⚙️ Project Structure
 
@@ -54,6 +63,9 @@ LeetCode-Helper-Extension/
 
 yaml
 Copy code
+
+
+
 
 ---
 
